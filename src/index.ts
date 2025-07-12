@@ -1,4 +1,5 @@
 import { GatewayIntentBits, Client, Message, Events } from "discord.js";
+import { startHealthCheckCron } from "./cron";
 
 const { token } = require("../config.json");
 
@@ -42,3 +43,6 @@ Bun.serve({
     return new Response('Hello from Koyeb')
   },
 })
+
+// スリープ防止ヘルスチェック
+startHealthCheckCron();
