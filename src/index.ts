@@ -1,6 +1,6 @@
 import { GatewayIntentBits, Client, Message, Events } from "discord.js";
 
-const { token } = require("./config.json");
+const { token } = require("../config.json");
 
 // 権限を指定してクライアントを作成
 const client = new Client({
